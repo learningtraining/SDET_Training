@@ -1,0 +1,50 @@
+Appium works in a client-server architecture
+Appium is an ‘HTTP Server’ written using – Node.js platform
+Client libraries
+Java
+Python
+C#
+Javascript
+Ruby
+PHP
+Robot Framework
+
+Desired Capabilities
+Desired capabilities are a set of keys and values sent to the Appium server to tell the server what kind of automation session we're interested in starting up
+
+
+=====================================================================
+npm install appium-doctor -g
+
+
+Andriod_Home: 
+C:\Users\Admin\AppData\Local\Android\Sdk
+
+
+adb devices
+
+Chrome Driver issue:
+C:\Users\Admin\AppData\Roaming\npm\node_modules\appium\node_modules\appium-chromedriver\chromedriver\win
+
+
+##
+Inspect elements of Mobile Web Application
+chrome://inspect/#devices
+
+================================================================
+
+		DesiredCapabilities capabilites = new DesiredCapabilities();
+
+		capabilites.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
+		capabilites.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
+		capabilites.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.0");
+		capabilites.setCapability(MobileCapabilityType.DEVICE_NAME, "Redmi");
+		capabilites.setCapability(MobileCapabilityType.UDID, "cd1f9a910903");
+		capabilites.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
+		//capabilites.setCapability("appPackage", "com.miui.calculator");
+		//capabilites.setCapability("appActivity", "com.miui.calculator.cal.CalculatorActivity");
+
+		capabilites.setCapability("browserName", "Chrome");
+
+		driver = new AppiumDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilites);
+
